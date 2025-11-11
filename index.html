@@ -49,22 +49,22 @@
             position: relative;
         }
 
-      .logo-header {
+     .logo-header {
     position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .logo-header img {
-    height: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    object-fit: cover;  /* cobre toda a largura, cortando se precisar */
-    object-position: center;
+    object-fit: fill; /* preenche tudo, mesmo que distorça */
 }
+
 
 
 
