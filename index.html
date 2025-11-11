@@ -48,22 +48,20 @@
             justify-content: center;
             position: relative;
         }
-
+        
         .logo-header {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('https://drive.google.com/file/d/1b7ahoIdKbdEdg1NrNrpTQ_5czc5B_xvN/view?usp=sharing');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
 
-.logo-header img {
-    height: 100%;
-    width: auto;
-    max-height: 100%;
-    object-fit: contain;
-}
-
+        
         /* Fallback para caso a imagem não carregue */
         .logo-header::after {
             content: "AmaZen - Arte com alma amazônica";
@@ -526,10 +524,7 @@
     <!-- HEADER -->
     <header id="header">
         <div class="header-container">
-            <div class="logo-header">
-    <img src="imagens/logo.png" alt="AmaZen - Arte com alma amazônica" style="height: 80px;">
-</div>
-
+            <div class="logo-header"></div>
             <nav>
                 <a href="#valores">Valores</a>
                 <a href="#colecao">Coleção</a>
