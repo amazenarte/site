@@ -36,7 +36,7 @@
         }
         
         header.scrolled {
-            height: 80px;
+            height: 120px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         
@@ -53,19 +53,17 @@
     position: relative;
     height: 100%;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .logo-header img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: fill; /* preenche tudo, mesmo que distorça */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* mantém a proporção original */
 }
-
-
 
 
         /* Fallback para caso a imagem não carregue */
