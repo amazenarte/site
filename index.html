@@ -49,19 +49,23 @@
             position: relative;
         }
 
-       .logo-header {
+      .logo-header {
+    position: relative;
     height: 100%;
     width: 100%;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .logo-header img {
-    height: 50%; /* ocupa 50% da altura do header */
-    width: auto;
-    object-fit: contain;
+    height: 50%;
+    width: 100%;
+    object-fit: cover;  /* cobre toda a largura, cortando se precisar */
+    object-position: center;
 }
+
 
 
         /* Fallback para caso a imagem não carregue */
