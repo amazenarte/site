@@ -18,27 +18,33 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* HEADER */
-        header {
-            background: white;
-            padding: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+
+header {
+    background: white;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 220px; /* AUMENTEI DE 180px PARA 200px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* AUMENTEI O PADDING */
+}
+
+header.scrolled {
+    height: 160px; /* AUMENTEI DE 120px PARA 140px */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
         
-        header.scrolled {
-            height: 120px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+
+  
         
         .header-container {
             width: 100%;
@@ -49,25 +55,30 @@
             position: relative;
         }
 
- .logo-header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
+        .logo-header {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
 
-.logo-header img {
-    max-height: 100%;
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-}
+
+        .logo-header img {
+            max-height: 100%;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            /* Ajuste para ocupar toda a área disponível */
+            width: 30%;
+            height: 95%;
+            object-fit: cover;
+        }
 
         /* Fallback para caso a imagem não carregue */
         .logo-header::after {
@@ -83,6 +94,7 @@
             right: 40px;
             display: flex;
             gap: 32px;
+            z-index: 10; /* Garante que o menu fique acima da logo */
         }
         
         nav a {
@@ -114,19 +126,20 @@
         }
         
         /* HERO SECTION */
-        .hero {
-            margin-top: 180px;
-            background: linear-gradient(135deg, #1B5E3B 0%, #2D7A52 100%);
-            color: white;
-            padding: 120px 40px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header.scrolled + .hero {
-            margin-top: 120px;
-        }
+
+.hero {
+    margin-top: 200px; /* AUMENTEI DE 180px PARA 200px */
+    background: linear-gradient(135deg, #1B5E3B 0%, #2D7A52 100%);
+    color: white;
+    padding: 120px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header.scrolled + .hero {
+    margin-top: 140px; /* AUMENTEI DE 120px PARA 140px */
+}
         
         .hero::before {
             content: '';
@@ -453,87 +466,55 @@
             }
         }
         
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            header {
-                height: 100px;
-            }
-            
-            header.scrolled {
-                height: 70px;
-            }
-            
-            nav {
-                right: 20px;
-                gap: 16px;
-            }
-            
-            nav a {
-                font-size: 12px;
-            }
-            
-            .hero {
-                margin-top: 100px;
-                padding: 80px 20px;
-            }
-            
-            header.scrolled + .hero {
-                margin-top: 70px;
-            }
-            
-            .hero h2 {
-                font-size: 36px;
-            }
-            
-            .hero p {
-                font-size: 18px;
-            }
-            
-            .section-title {
-                font-size: 32px;
-            }
-            
-            .sustentabilidade-content,
-            .contato-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .valores-grid,
-            .colecao-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            header {
-                height: 80px;
-            }
-            
-            header.scrolled {
-                height: 60px;
-            }
-            
-            nav {
-                display: none;
-            }
-            
-            .hero {
-                margin-top: 80px;
-            }
-            
-            header.scrolled + .hero {
-                margin-top: 60px;
-            }
-        }
+      /* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        height: 120px; /* AUMENTE CONFORME NECESSÁRIO */
+    }
+    
+    header.scrolled {
+        height: 90px; /* AUMENTE CONFORME NECESSÁRIO */
+    }
+    
+    /* ... resto do código ... */
+    
+    .hero {
+        margin-top: 120px; /* AJUSTE CONFORME O HEADER */
+    }
+    
+    header.scrolled + .hero {
+        margin-top: 90px; /* AJUSTE CONFORME O HEADER SCROLLED */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 100px; /* AUMENTE CONFORME NECESSÁRIO */
+    }
+    
+    header.scrolled {
+        height: 80px; /* AUMENTE CONFORME NECESSÁRIO */
+    }
+    
+    /* ... resto do código ... */
+    
+    .hero {
+        margin-top: 100px; /* AJUSTE CONFORME O HEADER */
+    }
+    
+    header.scrolled + .hero {
+        margin-top: 80px; /* AJUSTE CONFORME O HEADER SCROLLED */
+    }
+}
+
     </style>
 </head>
 <body>
     <!-- HEADER -->
     <header id="header">
         <div class="header-container">
-
             <div class="logo-header">
-    <img src="Logo_AmaZen.png" alt="AmaZen - Arte com alma amazônica" style="height: 80px;">
+                <img src="Logo_AmaZen.png" alt="AmaZen - Arte com alma amazônica">
             </div>
             <nav>
                 <a href="#valores">Valores</a>
