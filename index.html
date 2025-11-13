@@ -49,10 +49,8 @@
             position: relative;
         }
 
-        .logo-header { position: absolute; left: 40px; height: 100%; display: flex; align-items: center; justify-content: flex-start; padding: 15px 0; } 
-        .logo-header img { height: calc(100% - 30px); width: auto; object-fit: contain; }
-
-  
+       .logo-header { position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; align-items: center; justify-content: center; padding: 10px; } 
+        .logo-header img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; }  
 
         /* Fallback para caso a imagem não carregue */
         .logo-header::after {
